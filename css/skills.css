@@ -1,0 +1,349 @@
+@import url("https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap");
+
+.skills {
+   margin-top: 5rem;
+   padding-top: 2rem;
+   font-family: "Ubuntu", sans-serif;
+}
+.skills .container {
+   width: 70%;
+   margin: auto;
+   list-style: none;
+}
+
+.skills .title {
+   color: whitesmoke;
+   margin-top: 5rem;
+   font-size: 2.3rem;
+   font-weight: 400;
+   position: relative;
+   margin-bottom: 5rem;
+   opacity: 0.9;
+}
+.skills .title::after {
+   content: "";
+   position: absolute;
+   bottom: 1rem;
+   opacity: 0.3;
+   width: 25rem;
+   height: 0.1px;
+   background-color: var(--main-color);
+   transform: translateX(5%);
+}
+.skills-container {
+   width: 65%;
+   margin: auto;
+   border: var(--main-color) thin double;
+   border-radius: 10px;
+   overflow: hidden;
+}
+[data-tab-content] {
+   display: none;
+}
+
+.active[data-tab-content] {
+   display: block;
+}
+.tabs {
+   display: flex;
+   /* justify-content: space-between; */
+   
+   list-style-type: none;
+   align-items: center;
+   font-size: 2rem;
+   margin-top: 0;
+   box-shadow: white 2px;
+   overflow: hidden;
+}
+.tab {
+   font-size: 1.3rem;
+   background-color: var(--background-color);
+   text-align: center;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   opacity: 0.7;
+   color: azure;
+   padding: 1.5rem 2rem;
+   margin-top: 0;
+   cursor: pointer;
+   border-top: none;
+   transition: ease 300ms;
+   flex-grow:1;
+   border: 1px solid var(--main-color);
+}
+.tabs .tab.active {
+   opacity: 11;
+   color: #64ffda;
+   border: none;
+   border-left: 1px var(--main-color) double;
+   transition: ease-in-out 300ms;
+   transform: scale(1.2);
+}
+.content-tab {
+   border-radius: 10px;
+}
+.page {
+   background-color: rgb(8, 27, 61);
+   margin: 1rem;
+   padding: 1rem;
+   -webkit-transition: background-color 1000ms linear;
+   -ms-transition: background-color 1000ms linear;
+   transition: background-color 1000ms linear;
+}
+
+.page.active {
+   background-color: var(--background-color);
+   -webkit-transition: background-color 1000ms linear;
+   -ms-transition: background-color 1000ms linear;
+   transition: background-color 1000ms linear;
+}
+
+.skills-tabs {
+   margin: 2rem auto;
+   color: white;
+   width: 80%;
+   font-size: 1.3rem;
+   font-family: "Architects Daughter", cursive;
+}
+
+.skill-bar {
+   background: #353b48;
+   display: block;
+   height: 8px;
+   border-radius: 3px;
+   overflow: hidden;
+   margin: 0.2rem 0 1.5rem 0;
+   box-shadow: 0 0 10 #2187e7b3;
+}
+
+.skill-bar span {
+   height: 7px;
+   float: left;
+   border-bottom-right-radius: 2px;
+   border-top-right-radius: 2px;
+   background: #64ffda;
+}
+.bar-details {
+   display: flex;
+   justify-content: space-between;
+}
+@media screen and (max-width: 1440px) {
+   .skills-container {
+      width: 85%;
+   }
+   .tab{
+      padding: 1.5rem;
+   }
+}
+@media screen and (max-width: 1100px) {
+   .tab {
+      font-size: 1.1rem;
+   }
+}
+@media screen and (max-width: 900px) {
+   .skills-container {
+      width:90%;
+   }
+   .tabs .tab {
+      font-size: 1rem;
+   }
+}
+
+@media screen and (max-width: 768px) {
+   .skills {
+      text-align: center;
+   }
+   .skills .title {
+      text-decoration: underline double;
+   }
+   .skills .title::after {
+      display: none;
+   }
+   .skills .container {
+      width: 100%;
+   }
+   .skills-tabs {
+      width: 100%;
+      font-size: 1rem;
+   }
+   .skills-container {
+      width: 90%;
+   }
+
+   .tabs .tab.active {
+      transform: scale(1.1);
+   }
+   .tabs .tab {
+      font-size: 1.1rem;
+    
+   }
+}
+
+@media screen and (max-width : 600px) {
+   .tabs .tab{
+      font-size: 0.9rem;
+   }
+   
+}
+@media screen and (max-width: 450px) {
+   .skills-container {
+      width: 90%;
+   }
+   .tabs .tab {
+      font-size: 0.5rem;
+   }
+}
+
+.html {
+   width: 90%;
+   animation: html 1s;
+}
+.css {
+   width: 80%;
+   animation: css 1s;
+}
+.JavaScript {
+   width: 60%;
+   animation: JavaScript 1s;
+}
+.react {
+   width: 50%;
+   animation: react 1s;
+}
+.java {
+   width: 75%;
+   animation: Java 1.6s;
+}
+.cpp {
+   width: 60%;
+   animation: C 1.2s;
+}
+.ds {
+   width: 80%;
+   animation: DS 1s;
+}
+.ada {
+   width: 50%;
+   animation: ADA 1.5s;
+}
+.nodeJs {
+   width: 60%;
+   animation: nodeJs 1.7s;
+}
+.fireBase {
+   width: 70%;
+   animation: firebase 1.5s;
+}
+.mongoDB {
+   width: 50%;
+   animation: mongodb 1s;
+}
+.java-spring {
+   width: 60%;
+   animation: javaspring 2s;
+}
+
+@keyframes html {
+   0% {
+      width: 0%;
+   }
+   100% {
+      width: 90%;
+   }
+}
+
+@keyframes css {
+   0% {
+      width: 0;
+   }
+   100% {
+      width: 80%;
+   }
+}
+
+@keyframes react {
+   0% {
+      width: 0;
+   }
+   100% {
+      width: 50%;
+   }
+}
+
+@keyframes JavaScript {
+   0% {
+      width: 0%;
+   }
+   100% {
+      width: 60%;
+   }
+}
+
+@keyframes Java {
+   0% {
+      width: 0%;
+   }
+   100% {
+      width: 75%;
+   }
+}
+
+@keyframes DS {
+   0% {
+      width: 0%;
+   }
+   100% {
+      width: 80%;
+   }
+}
+
+@keyframes C {
+   0% {
+      width: 0%;
+   }
+   100% {
+      width: 60%;
+   }
+}
+
+@keyframes ADA {
+   0% {
+      width: 0%;
+   }
+   100% {
+      width: 50%;
+   }
+}
+@keyframes nodeJs {
+   0% {
+      width: 0%;
+   }
+   100% {
+      width: 60%;
+   }
+}
+@keyframes firebase {
+   0% {
+      width: 0%;
+   }
+   100% {
+      width: 70%;
+   }
+}
+@keyframes mongodb {
+   0% {
+      width: 0%;
+   }
+   100% {
+      width: 50%;
+   }
+}
+@keyframes javaspring {
+   0% {
+      width: 0%;
+   }
+   100% {
+      width: 60%;
+   }
+}

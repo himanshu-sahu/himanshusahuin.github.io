@@ -1,0 +1,161 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap");
+
+.about {
+   font-family: "Ubuntu", sans-serif;
+   text-decoration: none;
+   padding-top: 8rem;
+   margin-bottom: 200px;
+}
+.about a {
+   color: var(--main-color);
+}
+.about .container {
+   width: 80%;
+   margin: auto;
+}
+.about .title {
+   /* text-align: center; */
+   color: whitesmoke;
+   font-size: 2.3rem;
+   position: relative;
+   margin-bottom: 2rem;
+   opacity: 0.9;
+}
+.about .title::after {
+   content: "";
+   position: absolute;
+   bottom: 1rem;
+   opacity: 0.3;
+   width: 25rem;
+   height: 0.1px;
+   background-color: var(--main-color);
+   transform: translateX(5%);
+}
+
+.about-content {
+   display: flex;
+   justify-content: space-evenly;
+   align-items: center;
+   margin-top: 2rem;
+}
+.about-info {
+   color: #828ba9;
+   margin-right: 2rem;
+   padding: 1rem;
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-between;
+   font-size: 1.2rem;
+}
+.about-info .main-text {
+   font-size: 1.7rem;
+   margin-bottom: 1rem;
+   color: whitesmoke;
+}
+.about-info .main-text span {
+   color: red;
+}
+.about-info p {
+   letter-spacing: 1px;
+   font-family: "Open Sans", sans-serif;
+   font-weight: 600;
+   margin-bottom: 1rem;
+}
+.about-info p a {
+   transition: all 3s ease;
+}
+.about-info p a:hover {
+   border-bottom: white solid 1px;
+}
+.about-info .btn-resume {
+   margin-top: 3rem;
+   transition: all 200ms ease;
+}
+.btn-resume a {
+   padding: 1rem;
+
+   transition: all 200ms ease;
+}
+.btn-resume a:hover {
+   background-color: rgb(12, 196, 196);
+   color: var(--background-color);
+   transition: all 300ms ease;
+}
+.btn-resume:hover {
+   transform: scale(0.97);
+   transition: all 300ms ease;
+}
+
+.profile-photo img {
+   width: 300px;
+   height: 330px;
+   position: relative;
+   object-fit: cover;
+   border-radius: 2%;
+}
+
+.profile-photo {
+   position: relative;
+   filter: hue-rotate(90deg);
+   margin-right: 2rem;
+   transition: all 200ms linear;
+}
+
+.profile-photo:hover {
+   opacity: 1;
+   filter: none;
+}
+.profile-photo::before {
+   position: absolute;
+   content: "";
+   left: 15px;
+   top: 25px;
+   border: 2px solid;
+   border-color: var(--main-color);
+   width: 100%;
+   border-radius: 2%;
+   height: 95%;
+   transition: all 200ms linear;
+}
+
+.profile-photo:hover::before {
+   left: 12px;
+   top: 20px;
+}
+
+@media screen and (max-width: 768px) {
+   .about {
+      padding-top: 6rem;
+   }
+   .about .about-content {
+      flex-direction: column-reverse;
+      text-align: center;
+      justify-content: center;
+   }
+   .about .about-info {
+      align-items: center;
+      justify-content: center;
+      margin: 1rem;
+   }
+   .about .title {
+      text-align: center;
+      text-decoration: underline double;
+   }
+   .about .title::after {
+      display: none;
+   }
+   .about-info p {
+      font-size: 1rem;
+   }
+}
+
+@media screen and (max-width: 991px) {
+   .profile-photo img {
+      width: 250px;
+      height: 270px;
+   }
+   .about-info p {
+      font-size: 1rem;
+      margin-bottom: 0;
+   }
+}

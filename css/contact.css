@@ -1,0 +1,174 @@
+@import url("https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap");
+
+.contact {
+   font-family: "Ubuntu", sans-serif;
+   margin-top: 1rem;
+}
+.contact .container {
+   width: 80%;
+   margin: auto;
+   padding-top: 2rem;
+}
+.contact a {
+   text-decoration: none;
+   color: var(--main-color);
+}
+.contact .title {
+   color: whitesmoke;
+   font-size: 2.3rem;
+   position: relative;
+   margin-bottom: 2rem;
+   opacity: 0.9;
+}
+.contact .title::after {
+   content: "";
+   position: absolute;
+   bottom: 1rem;
+   opacity: 0.3;
+   width: 30rem;
+   height: 0.1px;
+   background-color: var(--main-color);
+   transform: translateX(5%);
+}
+.contact-content {
+   display: flex;
+   color: aliceblue;
+   justify-content: space-around;
+   padding: 2rem;
+}
+.contact-about {
+   padding: 1rem;
+   width: 50%;
+}
+
+.contact-about p {
+   color: var(--main-color);
+}
+input {
+   min-width: 100%;
+   padding: 0.5rem 1rem;
+   font-family: "Ubuntu", sans-serif;
+   outline: none;
+   font-size: 1rem;
+   margin: 3px;
+   border: none;
+   font-weight: lighter;
+   background-color: #013a63;
+   color: var(--main-color);
+   border-radius: 3px;
+}
+::placeholder {
+   color: white;
+}
+
+textarea {
+   border-radius: 3px;
+   width: 90%;
+   min-width: 100%;
+   margin: 3px;
+   background-color: #013a63;
+   border: none;
+   outline: none;
+   color: var(--main-color);
+   min-height: 190px;
+   max-height: 300px;
+   font-size: 1rem;
+   resize: none;
+   padding: 0.5rem 1rem;
+}
+textarea::-webkit-scrollbar-thumb {
+   background-color: #5e60ce;
+}
+.send-btn {
+   transition: all 300ms ease;
+}
+
+.send-btn button {
+   background-color: var(--background-color);
+   z-index: inherit;
+   cursor: pointer;
+   font-size: 1rem;
+   float: right;
+   color: var(--main-color);
+   border: 1px solid var(--main-color);
+   padding: 1rem;
+   border-radius: 3px;
+}
+.send-btn button:hover {
+   background-color: rgb(12, 196, 196);
+   color: var(--background-color);
+   transition: all 300ms ease;
+}
+.send-btn:hover {
+   transform: scale(0.98);
+}
+.personal-details {
+   display: flex;
+   min-width: 50%;
+   flex-direction: column;
+   justify-content: center;
+   align-items: flex-start;
+   padding: 1rem;
+}
+.contact-card {
+   min-height: 50px;
+   display: flex;
+   cursor: pointer;
+   align-items: center;
+   transition: all 0.5s ease;
+   margin: 1rem;
+}
+.contact-card a,
+.contact-card h4 {
+   margin-left: 1rem;
+   color: white;
+   font-size: 1.1rem;
+   font-family: "Architects Daughter", cursive;
+   letter-spacing: 2px;
+   transition: all 300ms ease;
+}
+.contact-card h4 {
+   color: rgb(0, 174, 255);
+}
+.contact-card a:hover {
+   color: white;
+   opacity: 1;
+   color: var(--main-color);
+}
+
+@media screen and (max-width: 1000px) {
+   .contact-content {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+   }
+
+   .contact-about {
+      width: 100%;
+   }
+}
+@media screen and (max-width: 768px) {
+   .contact .container{
+      width: 90%;
+   }
+   .contact .title {
+      align-items: center;
+      text-align: center;
+      justify-content: center;
+      text-decoration: double underline;
+   }
+   .contact .title::after {
+      display: none;
+   }
+   .contact-content{
+      padding: 1rem;
+   }
+   .personal-details p{
+      text-align: center;
+   }
+}
+@media screen and (max-width: 450px) {
+   .contact-card a {
+      font-size: 0.7rem;
+   }
+}

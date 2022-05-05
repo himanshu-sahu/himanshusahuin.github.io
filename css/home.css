@@ -1,0 +1,109 @@
+.home .container {
+   width: 80%;
+   margin: auto;
+}
+.home {
+   background-color: var(--background-color);
+   top: 8vh;
+   height: 100vh;
+   min-height: 100%;
+   color: whitesmoke;
+   text-align: center;
+   font-family: "Ubuntu",  sans-serif;
+}
+.home .container {
+   height: 100%;
+}
+
+.home-content {
+   height: 100%;
+}
+.info-content {
+   margin-top: 4rem;
+   display: flex;
+   height: 100%;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+
+#discription-info  {
+   max-width: 60%;
+   padding: 1rem 0;
+}
+
+.home .text-2 {
+   font-size: 3.8rem;
+   font-weight: 100;
+}
+
+.home .text-2 span {
+   color: red;
+}
+
+.home .text-3 {
+   font-size: 3.8rem;
+   color: #8892b0;
+   font-weight: bolder;
+}
+
+.home .text-3 span {
+   color: red;
+}
+.btns {
+   display: flex;
+   margin: 2rem;
+   align-items: center;
+}
+.home-btn {
+   margin: 1rem;
+}
+.btn-get-touch {
+   background-color: var(--background-color);
+   z-index: inherit;
+   margin-top: 20px;
+   transition: all 300ms ease;
+}
+
+.btn-get-touch a {
+   color: var(--main-color);
+   border: 1px solid var(--main-color);
+   padding: 20px;
+   border-radius: 5px;
+}
+.btn-get-touch a:hover {
+   background-color: rgb(12, 196, 196);
+   color: var(--background-color);
+   transition: all 300ms ease;
+}
+.btn-get-touch:hover {
+   transform: scale(0.98);
+   transition: all 300ms ease;
+}
+.btn-resume {
+   background-color: var(--background-color);
+   z-index: inherit;
+}
+
+.home .btn-resume a {
+   color: var(--main-color);
+   border: 1px solid var(--main-color);
+   padding: 19px;
+   border-radius: 5px;
+}
+
+@media screen and (max-width: 768px) {
+   .home .text-2 {
+      font-size: 3.5rem;
+   }
+   .home .text-3 {
+      font-size: 2.8rem;
+   }
+
+   .home .btns {
+      flex-direction: column-reverse;
+   }
+   .home .home-btn {
+      margin: 2rem;
+   }
+}

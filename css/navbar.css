@@ -1,0 +1,231 @@
+.navbar {
+   position: fixed;
+   display: flex;
+   justify-content: space-between;
+   margin: auto;
+   align-items: center;
+   background-color: var(--background-color);
+   width: 100%;
+   min-height: 8vh;
+   z-index: 999;
+   top: 0;
+   padding: 0 2rem;
+   padding-top: 0.5rem;
+   font-family: "Ubuntu", sans-serif;
+   transition: all 0.3s ease;
+   -moz-box-shadow: 0px 0px 10px 0px rgba(100, 255, 218, 0.1);
+   -webkit-box-shadow: 0px 0px 10px 0px rgba(100, 255, 218, 0.1);
+   box-shadow: 0px 0px 10px 0px rgba(15, 245, 187, 0.1);
+}
+
+.navbar.stick {
+   transform: translateY(-90px);
+   top: 0;
+   position: fixed;
+   /* padding: 0.5rem 2rem; */
+   z-index: 10;
+   background-color: var(--background-color);
+   width: 100%;
+   font-family: "Ubuntu", sans-serif;
+   -moz-box-shadow: 0px 0px 10px 0px rgba(100, 255, 218, 0.15);
+   -webkit-box-shadow: 0px 0px 10px 0px rgba(100, 255, 218, 0.15);
+   box-shadow: 0px 0px 10px 0px rgba(100, 255, 218, 0.15);
+}
+
+.logo {
+   color: var(--main-color);
+   text-transform: uppercase;
+   letter-spacing: 5px;
+   font-size: 1.7rem;
+}
+.logo a {
+   color: var(--main-color);
+}
+
+.logo-img {
+   width: 80px;
+   height: 80px;
+   padding: 0;
+}
+.nav-links {
+   display: flex;
+}
+
+.nav-links li {
+   list-style: none;
+   padding: 0.5rem;
+   transition: all 0.3s ease-in-out;
+}
+
+.nav-links li a {
+   color: white;
+   text-decoration: none;
+   text-transform: uppercase;
+   font-size: 1.1rem;
+   padding: 1rem;
+   transition: all 1s ease;
+}
+
+.nav-links li:hover,
+.nav-links li:focus {
+   transform: scale(1.1);
+}
+.nav-links li a:hover,
+.nav-links li a:focus {
+   color: var(--main-color);
+}
+.btn-resume {
+   background-color: var(--background-color);
+   z-index: inherit;
+}
+
+.btn-resume a {
+   color: var(--main-color);
+   border: 1px solid var(--main-color);
+   padding: 0.5rem;
+   border-radius: 5%;
+}
+
+.social ul {
+   display: flex;
+   list-style: none;
+   align-items: center;
+   border-left: dotted 1px var(--main-color);
+}
+.social ul li {
+   padding: 0.5rem 0;
+   transition: all 0.3s ease;
+}
+.social ul li:hover {
+   transform: scale(1.3);
+}
+
+/* Hamburger or toggle Menu */
+.toggle-button {
+   position: absolute;
+   top: 3rem;
+   right: 2.5rem;
+   display: none;
+   flex-direction: column;
+   justify-content: space-between;
+   width: 35px;
+   height: 21px;
+   margin-left: 0.5rem;
+   align-items: flex-end;
+   transform: translate(-5%, -50%);
+   cursor: pointer;
+   z-index: 100;
+}
+
+.toggle-button .bar {
+   background-color: var(--main-color);
+   width: 100%;
+   height: 3px;
+   border-radius: 10px;
+   transition: all 0.3s ease;
+}
+.toggle-button .bar2 {
+   width: 90%;
+}
+.toggle-button .bar3 {
+   width: 80%;
+}
+
+.nav-links.active {
+   transform: translateX(0%);
+}
+
+.active.bar1 {
+   transform: rotate(45deg) translate(7px, 6px);
+}
+.active.bar2 {
+   opacity: 0;
+}
+.active.bar3 {
+   width: 90%;
+   transform: rotate(-45deg) translate(5px, -6px);
+}
+
+@keyframes navLinkFade {
+   from {
+      opacity: 0;
+      transform: translateX(50px);
+   }
+   to {
+      opacity: 1;
+      transform: translateX(0px);
+   }
+}
+
+/* To make Responsive 768px */
+
+@media screen and (max-width: 768px) {
+   body {
+      overflow-x: hidden;
+   }
+   .container {
+      width: 90%;
+   }
+   .navbar {
+      justify-content: space-between;
+      width: 100%;
+   }
+   .logo-img {
+      width: 70px;
+      height: 70px;
+      padding: 0;
+   }
+   .nav-links {
+      position: absolute;
+      width: 80%;
+      right: 0px;
+      height: 100vh;
+      scroll-behavior: smooth;
+      top: 8vh;
+      background-color: var(--background-color);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transform: translateX(100%);
+      transition: transform 0.5s ease;
+      z-index: 100;
+   }
+
+   .nav-links li {
+      opacity: 0;
+      padding: 1rem;
+      margin-bottom: 0.5rem;
+   }
+
+   .nav-links li a {
+      padding: 1rem;
+      font-size: 1.3rem;
+      text-transform: uppercase;
+      transition: all 0.5s ease;
+   }
+   .nav-links li a:hover,
+   .nav-links li a:focus {
+      font-size: 1.4rem;
+   }
+   .toggle-button {
+      display: flex;
+   }
+   .social ul {
+      border: none;
+      border-top: 1px dotted var(--main-color);
+   }
+   .nav-links.active li {
+      margin: 1.5rem;
+   }
+   .nav-links.active li:hover,
+   .nav-links.active li:focus {
+      transform: scale(1.1);
+   }
+}
+
+@media screen and (max-width: 800px) {
+   .nav-links li {
+      padding: 0.5rem;
+      margin: 0;
+   }
+}

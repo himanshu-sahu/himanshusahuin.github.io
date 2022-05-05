@@ -1,0 +1,158 @@
+@import "./carosule.css";
+
+.achivements {
+   margin-top: 7rem;
+   font-family: "Ubuntu", sans-serif;
+}
+.achivements .container {
+   width: 70%;
+   margin: auto;
+}
+.achivements .title {
+   color: whitesmoke;
+   font-size: 2.3rem;
+   font-weight: 400;
+   position: relative;
+   margin-bottom: 2rem;
+   opacity: 0.9;
+}
+.achivements .title::after {
+   content: "";
+   position: absolute;
+   bottom: 1rem;
+   opacity: 0.3;
+   width: 28rem;
+   height: 0.1px;
+   background-color: var(--main-color);
+   transform: translateX(5%);
+}
+.achivements-content {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   overflow: hidden;
+}
+.coding-profiles{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   overflow: hidden;
+}
+.achivements-card{
+   /* border: 1px solid var(--main-color); */
+   max-width: 350px;
+   padding: 1rem;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   align-items: center;
+   text-align: center;
+   border-radius: 10px;
+   align-items: center;
+   background-color: #FFA116;
+   min-height: 180px;
+   flex: 1;
+   margin: 1rem;
+}
+
+.achivements-card h4 {
+   text-align: center;
+   color: black;
+   margin-bottom: 1rem;
+   font-size: 1.4rem;
+}
+.achivements-card p{
+   color: white;
+}
+.achivements-card h5 {
+   bottom: 0;
+   margin-top: auto;
+   margin-top: 1rem;
+}
+.achivements-card h5 a{
+   color: black;
+   display: inline-block;
+   position: relative;
+   transition: all ease 300ms;
+}
+.achivements-card h5 a:hover {
+   transform: scale(1.1);
+   
+}
+.achivements-card h5 a:after {
+   content: '';
+   position: absolute;
+   width: 100%;
+   transform: scaleX(0);
+   height: 1.3px;
+   bottom: 2;
+   left: 0;
+   background-color: black;
+   transform-origin: bottom right;
+   transition: transform 0.25s ease-out;
+   margin-top: 1rem;
+ }
+ 
+ .achivements-card h5 a:hover:after {
+   transform: scaleX(1);
+   transform-origin: bottom left;
+ }
+
+.gfg{
+   background-color: #308D43;
+}
+.gfg h4{
+   color: #2A2A2C;
+}
+.code-chef{
+   background-color: #99440f;
+}
+.code-chef h4{
+   color: #F8F3DE;
+}
+
+@media (max-width : 1100px){
+   .achivements-card h5 a{
+      font-size: 0.7rem;
+   }
+}
+@media (max-width : 991px){
+   .achivements .container{
+      width: 90%;
+   }
+  
+   #slider {
+      width: 500px;
+      height: 250px;
+  }
+
+  #slider ul li img{
+   width: 500px;
+   height: 250px;
+ }
+}
+@media (max-width : 768px) {
+   .achivements .title {
+      text-align: center;
+      text-decoration: underline double;
+   }
+   .achivements .title::after {
+      display: none;
+   }
+   .coding-profiles{
+      flex-direction: column;
+   }
+   .achivements-card h5 a{
+      font-size:0.9rem;
+   }
+   #slider {
+      width: 400px;
+      height: 200px;
+  }
+
+  #slider ul li img{
+   width: 400px;
+   height: 200px;
+ }
+}
